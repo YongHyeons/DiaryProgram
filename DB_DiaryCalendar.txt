@@ -1,0 +1,44 @@
+CREATE DATABASE diary;
+
+CREATE TABLE diary_member(
+	id varchar(20) not null,
+	passwd varchar(40) not null,
+	pw_question int not null,
+	pw_answer varchar(40) not null,
+	primary key(id)
+);
+
+CREATE TABLE diary_event(
+	no int auto_increment,
+	title varchar(100) not null,
+	location varchar(100),
+	content varchar(2000),
+	begin_year int not null,
+	begin_month int not null,
+	begin_date int not null,
+	begin_hour int not null,
+	begin_minute int not null,
+	end_year int not null,
+	end_month int not null,
+	end_date int not null,
+	end_hour int not null,
+	end_minute int not null,
+	id varchar(10),
+	primary key(no),
+	foreign key (id) references diary_member(id)
+);
+
+insert into diary_member values('jbchoi', '1234', 0, 'test');
+insert into diary_member values('yhlee', '1234', 0, '돈');
+insert into diary_member values('guest', 'guest', 0, 'guest');
+select * from diary_member;
+
+insert into diary_event values(null, '가상강좌 기말고사', '학교', '기말고사만 보면 끝이다', 2019, 12, 7, 9, 0, 2019, 12, 7, 13, 00, 'jbchoi');
+insert into diary_event values(null, '아르바이트', '독산동', '아르바이트 하기 싫다', 2019, 12, 7, 15, 0, 2019, 12, 7, 21, 00, 'jbchoi');
+insert into diary_event values(null, '기말고사', '학교', '기말고사만 보면 끝이다', 2019, 12, 9, 9, 0, 2019, 12, 13, 18, 00, 'jbchoi');
+insert into diary_event values(null, '자바 기말 프로젝트', '학교', '힘들다', 2019, 12, 12, 9, 0, 2019, 12, 12, 18, 00, 'jbchoi');
+
+로그인한 사용자 기준에서 설명 (이벤트 추가, 수정, 삭제)
+
+insert into diary_event values(null, '영어공부', '집', '영어공부하기', 2019, 12, 30, 9, 0, 2020, 1, 20, 18, 00, 'guest');
+회원가입 없이 사용으로 들어온 후 이벤트 등록
