@@ -31,7 +31,7 @@ Java의 Swing Components을 활용한 GUI Program
 
 #### ⭐ Project Tree
 
-![image](https://github.com/user-attachments/assets/abfe867c-0a47-4f86-9ab9-ed60e23ba433)
+![image](https://github.com/user-attachments/assets/b42902cb-0384-48f7-9b8e-7f05a47d3b7c)
 
 <br><br>
 
@@ -44,7 +44,7 @@ Java의 Swing Components을 활용한 GUI Program
 <br><br>
 
 ---
-### 📖 Pages View
+### 📖 View
 
 <br>
 
